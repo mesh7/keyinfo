@@ -102,10 +102,10 @@
 }
 .card-content-text {
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 1.25rem;
     text-align: center;
     background: transparent;
-    margin: 2rem;
+    margin: 2rem 0.25rem;
 }
 
 .footer {
@@ -128,4 +128,3 @@
     margin-right: 0.5rem;
     color: black;
 }
-    
