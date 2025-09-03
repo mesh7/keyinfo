@@ -100,9 +100,10 @@
   padding: 0.75rem;
   text-align: center;
 }
+
 .card-content-text {
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 3rem;
   text-align: center;
   background: transparent;
   margin: 2rem 0.25rem;
@@ -115,6 +116,7 @@
   padding: 1.5rem 0;
   position: relative;
 }
+
 .footer-text-mesh {
   text-align: center;
 }
@@ -149,7 +151,7 @@
   }
 
   .card-content-text {
-    font-size: 1rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -165,7 +167,7 @@
   }
 
   .card-content-text {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .card-header-text {
