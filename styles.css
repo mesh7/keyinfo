@@ -52,12 +52,17 @@
 
 .card-container {
   display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.card-section {
+  display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .card {
-  width: 175px;
+  width: 200px;
   height: 200px;
   background-color: rgb(199, 199, 199);
   border-radius: 0.75rem;
@@ -103,7 +108,7 @@
 
 .card-content-text {
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   background: transparent;
   margin: 2rem 0.25rem;
@@ -151,7 +156,7 @@
   }
 
   .card-content-text {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
