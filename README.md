@@ -50,6 +50,7 @@ Visit the project at: https://mesh7.github.io/keyinfo/
 ## Browser Compatibility
 
 Works on all modern browsers that support:
+
 - ES6 JavaScript
 - DOM API
 - Clipboard API
