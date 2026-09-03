@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
 
 * {
-  /* padding: 0; */
-  /* margin: 0; */
+  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   background-color: #f5f5f5;
   font-family: "Source Code Pro", monospace;
+}
+
+body {
+  margin: 0;
 }
 
 .container {
@@ -184,8 +187,13 @@
 }
 
 @media screen and (max-width: 768px) {
+  .card-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .card {
-    width: 100px;
+    width: min(40vw, 180px);
     height: 100px;
     margin: 0.75rem;
   }
@@ -196,6 +204,7 @@
 
   .card-content-text {
     font-size: 1rem;
+    margin: 0.25rem 0.25rem;
   }
 
   .card-header-text {
@@ -205,8 +214,18 @@
 }
 
 @media screen and (max-width: 425px) {
+  .header {
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .logo-image {
+    width: 56px;
+  }
+
   .header-title {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    margin-left: 0.75rem;
   }
 
   .description {
@@ -214,8 +233,32 @@
   }
 
   .card {
-    width: 110px;
+    width: calc(50% - 1rem);
+    min-width: 0;
+    height: 110px;
     margin: 0.5rem;
+  }
+
+  .card-header-text {
+    padding: 0.5rem;
+  }
+
+  .card-content-text {
+    margin: 0.5rem 0.25rem;
+    overflow-wrap: anywhere;
+  }
+
+  .key-history-section {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+  }
+
+  .history-header {
+    font-size: 1rem;
+  }
+
+  .history-content {
+    line-height: 1.75;
   }
 
   .card-content {
