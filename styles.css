@@ -1,14 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --page-background: #f5f5f5;
+  --text-color: #222;
+  --card-background: rgb(199, 199, 199);
+  --history-background: #fff;
+  --history-text: #666;
+  --link-color: #000;
+  --shadow-color: rgba(38, 38, 38, 0.2);
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  background-color: #f5f5f5;
   font-family: "Source Code Pro", monospace;
 }
 
 body {
   margin: 0;
+  background-color: var(--page-background);
+  color: var(--text-color);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.dark-mode {
+  --page-background: #17191c;
+  --text-color: #f1f3f5;
+  --card-background: #34383e;
+  --history-background: #24282d;
+  --history-text: #c5cbd3;
+  --link-color: #f1f3f5;
+  --shadow-color: rgba(0, 0, 0, 0.35);
 }
 
 .container {
@@ -26,6 +48,8 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-container {
@@ -42,6 +66,22 @@ body {
   text-align: center;
   letter-spacing: 0.25rem;
   margin-left: 1.5rem;
+}
+
+.theme-toggle {
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  margin-left: 1.5rem;
+  color: var(--text-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background-color: var(--text-color);
+  color: var(--page-background);
 }
 
 .description {
@@ -67,7 +107,7 @@ body {
 .card {
   width: 200px;
   height: 200px;
-  background-color: rgb(199, 199, 199);
+  background-color: var(--card-background);
   border-radius: 0.75rem;
   padding: 1rem;
   margin: 1rem;
@@ -78,9 +118,9 @@ body {
 
   &:hover {
     transition: all 0.2s ease-out;
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    box-shadow: 0px 4px 8px var(--shadow-color);
     top: -4px;
-    background-color: white;
+    background-color: var(--history-background);
   }
 
   &:before {
@@ -120,7 +160,7 @@ body {
 .key-history-section {
   margin: 2rem;
   padding: 1.5rem;
-  background-color: white;
+  background-color: var(--history-background);
   border-radius: 0.75rem;
   box-shadow: 0px 2px 4px rgba(38, 38, 38, 0.1);
 }
@@ -129,13 +169,13 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .history-content {
   font-family: "Source Code Pro", monospace;
   font-size: 1rem;
-  color: #666;
+  color: var(--history-text);
   word-break: break-word;
   min-height: 2rem;
 }
@@ -164,7 +204,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.125rem;
   margin-right: 0.5rem;
-  color: black;
+  color: var(--link-color);
 }
 
 @media screen and (max-width: 1024px) {
@@ -226,6 +266,10 @@ body {
   .header-title {
     font-size: 1.75rem;
     margin-left: 0.75rem;
+  }
+
+  .theme-toggle {
+    margin: 0.75rem 0 0;
   }
 
   .description {
